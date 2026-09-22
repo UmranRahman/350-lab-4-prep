@@ -2,7 +2,6 @@
 #define TIMER_H
 
 #include <chrono>
-#include <iostream>
 #include <cstdint>
 
 class Timer {
@@ -26,7 +25,7 @@ public:
     uint64_t click(){
         auto now = std::chrono::steady_clock::now();
         auto diff = std::chrono::duration_cast<T>(now - lastTime).count();
-        lastTime = now
+        lastTime = now;
         return diff;
     }
 
