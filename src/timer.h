@@ -21,6 +21,7 @@ public:
         lastTime = std::chrono::steady_clock::now();
     }
 
+    //both click and glance check for difference in time but only click updates the last time the timer was clicked
     template <typename T>
     uint64_t click(){
         auto now = std::chrono::steady_clock::now();
